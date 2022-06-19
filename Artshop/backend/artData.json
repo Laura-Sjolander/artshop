@@ -1,0 +1,28 @@
+[
+    {
+        "id" : 1,
+        "artName" : "Eagle",
+        "yearCreated" : 2022,
+        "sizeHeight" : 50 ,
+        "sizeWidth" : 50 ,
+        "colorCategory" : "green and blue"
+    },
+    {
+        "id" : 2,
+        "artName": "Aurora Borealis",
+        "yearCreated" : 2021,
+        "sizeHeight" : 40,
+        "sizeWidth" : 30, 
+        "colorCategory" : "dark"
+        
+    },
+    {
+        "id" : 3,
+        "artName": "Waterfalls",
+        "yearCreated" : 2020,
+        "sizeHeight" : 40,
+        "sizeWidth" : 30, 
+        "colorCategory" : "dark"
+        
+    }
+]
