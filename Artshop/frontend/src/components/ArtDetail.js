@@ -84,7 +84,7 @@ const DescriptionContainer = styled.div`
              
     `
 
-const ArtDetails = () => {
+const ArtDetail = () => {
     const [art, setArt] = useState({})
     const { id } = useParams()
     const navigate = useNavigate()
@@ -105,14 +105,17 @@ const ArtDetails = () => {
     return (
         <article>
             <p>hello this is artdetail.js</p>
+            <p>{`${art.artName}`}</p>
             
                 
                 <Background>
+                <GoBackButton onClick={onBackButtonClick}><FaArrowLeft />Back to startpage</GoBackButton>
                     <DetailContainer>
-                    <GoBackButton><FaArrowLeft />Back to list</GoBackButton>
+
+                    
                     <DescriptionContainer className='decription-container'>
                         <h1>{art.artName}</h1>
-                        <h2>H2 : {art.yearCreated}/10</h2>
+                        <h2>{art.yearCreated}</h2>
                         <p>{art.colorCategory}</p>
                     </DescriptionContainer>
 
@@ -123,20 +126,9 @@ const ArtDetails = () => {
                 </Background>
 
                 
-                {/* <Background style={{ backgroundImage: `url(${backdrop})` }}>
-                <DetailContainer className='detail-container'>
-                    <img src={/backend/image} alt={art.artName} />
-                    <GoBackButton onClick={onBackButtonClick}><FaArrowLeft />Back to list</GoBackButton>
-                    <DescriptionContainer className='decription-container'>
-                        <h1>{movie.title}</h1>
-                        <h2>Ratings: {movie.vote_average}/10</h2>
-                        <p>{movie.overview}</p>
-                    </DescriptionContainer>
-                </DetailContainer>
-            </Background> */}
-        </article>
+         </article>
     )
 }
 
-export default ArtDetails
+export default ArtDetail
 

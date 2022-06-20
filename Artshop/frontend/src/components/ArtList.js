@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { ART_LIST_URL} from '../utils/urls'
+//import { POSTER_URL } from 'utils/urls'
 
 const ArtSection = styled.section`
     width: 100%;
@@ -15,10 +16,11 @@ const ArtSection = styled.section`
 const ArtCard = styled.article`
 display: flex;
 flex: 25%;
+flex-wrap: wrap;
 
-    a img {
-        width: 100%;
-        height: 100%;
+  a img {
+        width: 50%;
+        height: 50%;
         display: flex;
     }
   `
@@ -39,14 +41,13 @@ flex: 25%;
 
     return (
         <ArtSection>
-            <p> showing artlist.js </p>
             {artList.map((art) => {
                 
                 return (
                     <ArtCard key={art.id}>
                         <p>{`${art.artName}`}</p>
                          {<Link to={`/art/${art.id}`}>
-                           
+                         <img src={require('../assets/sea.jpg')} />
                         </Link>}
                         {/* <Link to={`/art/${art.id}`}>
                             <img src={urls} alt={art.artName} />

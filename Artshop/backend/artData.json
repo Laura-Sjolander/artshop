@@ -24,5 +24,14 @@
         "sizeWidth" : 30, 
         "colorCategory" : "dark"
         
+    },
+    {
+        "id" : 4,
+        "artName": "Abstract",
+        "yearCreated" : 2020,
+        "sizeHeight" : 70,
+        "sizeWidth" : 50, 
+        "colorCategory" : "light"
+        
     }
 ]
