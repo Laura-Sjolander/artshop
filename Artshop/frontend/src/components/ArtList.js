@@ -17,6 +17,9 @@ const ArtCard = styled.article`
 display: flex;
 flex: 25%;
 flex-wrap: wrap;
+a:link {
+    text-decoration: none;
+  }
 
   a img {
         width: 50%;
@@ -44,15 +47,19 @@ flex-wrap: wrap;
             {artList.map((art) => {
                 
                 return (
+                    
                     <ArtCard key={art.id}>
+                        {<Link to={`/art/${art.id}`}>
                         <p>{`${art.artName}`}</p>
-                         {<Link to={`/art/${art.id}`}>
-                         <img src={require('../assets/sea.jpg')} />
-                        </Link>}
+                         
+                         <img src={require(`../assets/${art.imageName}`)} />
+                        
                         {/* <Link to={`/art/${art.id}`}>
                             <img src={urls} alt={art.artName} />
                         </Link> */}
+                        </Link>}
                     </ArtCard>
+                   
                 )
             })}
         </ArtSection>

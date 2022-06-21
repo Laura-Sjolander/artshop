@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 const Art = mongoose.model("Art", {
   id: Number,
   artName: String,
+  imageName: String,
   yearCreated: Number,
   sizeHeight: Number,
   sizeWidth: Number,

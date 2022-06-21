@@ -2,14 +2,16 @@
     {
         "id" : 1,
         "artName" : "Eagle",
+        "imageName": "eagle.jpg",
         "yearCreated" : 2022,
         "sizeHeight" : 50 ,
         "sizeWidth" : 50 ,
-        "colorCategory" : "green and blue"
+        "colorCategory" : "blue"
     },
     {
         "id" : 2,
-        "artName": "Aurora Borealis",
+        "artName": "Shadow people",
+        "imageName": "shadowpeople.jpg",
         "yearCreated" : 2021,
         "sizeHeight" : 40,
         "sizeWidth" : 30, 
@@ -19,19 +21,31 @@
     {
         "id" : 3,
         "artName": "Waterfalls",
+        "imageName": "waterfalls.jpg",
         "yearCreated" : 2020,
         "sizeHeight" : 40,
         "sizeWidth" : 30, 
-        "colorCategory" : "dark"
+        "colorCategory" : "blue"
         
     },
     {
         "id" : 4,
-        "artName": "Abstract",
+        "artName": "Woman",
+        "imageName": "woman.jpg",
         "yearCreated" : 2020,
         "sizeHeight" : 70,
         "sizeWidth" : 50, 
-        "colorCategory" : "light"
+        "colorCategory" : "green"
+        
+    },
+    {
+        "id" : 5,
+        "artName": "Home",
+        "imageName": "home.jpg",
+        "yearCreated" : 2020,
+        "sizeHeight" : 70,
+        "sizeWidth" : 50, 
+        "colorCategory" : "blue"
         
     }
 ]

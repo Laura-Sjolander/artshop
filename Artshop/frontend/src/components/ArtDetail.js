@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ART_DETAIL_URL } from '../utils/urls'
 
+//import { Link } from "react-router-dom"
+
 import styled from 'styled-components'
 import { FaArrowLeft } from 'react-icons/fa'
+
 
 
 const Background = styled.div`
@@ -88,15 +91,20 @@ const ArtDetail = () => {
     const [art, setArt] = useState({})
     const { id } = useParams()
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(true)
 
     const onBackButtonClick = () => {
         navigate(-1);
     }
 
     useEffect(() => {
+       setLoading(true)
         fetch(ART_DETAIL_URL(id))
             .then((res) => res.json())
-            .then((data) => setArt(data))
+            .then((data) =>{ setArt(data) 
+           setLoading(false)
+        })
+            
     }, [id])
 
     console.log(art)
@@ -104,21 +112,27 @@ const ArtDetail = () => {
     
     return (
         <article>
-            <p>hello this is artdetail.js</p>
             <p>{`${art.artName}`}</p>
-            
+
+                    
                 
                 <Background>
                 <GoBackButton onClick={onBackButtonClick}><FaArrowLeft />Back to startpage</GoBackButton>
                     <DetailContainer>
 
                     
-                    <DescriptionContainer className='decription-container'>
+                   { !loading && <DescriptionContainer className='decription-container'>
                         <h1>{art.artName}</h1>
                         <h2>{art.yearCreated}</h2>
                         <p>{art.colorCategory}</p>
-                    </DescriptionContainer>
-
+                       
+                        <img src={require(`../assets/${art.imageName}`)} />
+                        {/* <img src={require(`../assets/eagle.jpg`)} /> */}
+                         
+                        
+                       
+                    </DescriptionContainer>}
+                    {/* <img src={require(`../assets/${art.imageName}`)} />  */}
 
                     </DetailContainer>
 
