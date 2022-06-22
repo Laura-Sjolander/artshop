@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { ART_LIST_URL} from '../utils/urls'
-//import { POSTER_URL } from 'utils/urls'
+
 
 const ArtSection = styled.section`
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(0,0,0,0.75)
+    //flex-wrap: wrap;
+    // background-image: linear-gradient(to bottom right, #b7bdc2, #e0dbe1);
     
 `
 
@@ -17,14 +17,20 @@ const ArtCard = styled.article`
 display: flex;
 flex: 25%;
 flex-wrap: wrap;
+
 a:link {
     text-decoration: none;
+   
   }
 
   a img {
         width: 50%;
         height: 50%;
         display: flex;
+    }
+
+    p {
+        font-size: 12px;
     }
   `
 

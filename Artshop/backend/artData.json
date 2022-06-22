@@ -6,7 +6,8 @@
         "yearCreated" : 2022,
         "sizeHeight" : 50 ,
         "sizeWidth" : 50 ,
-        "colorCategory" : "blue"
+        "colorCategory" : "blue",
+        "price" : "2000"
     },
     {
         "id" : 2,
@@ -15,7 +16,8 @@
         "yearCreated" : 2021,
         "sizeHeight" : 40,
         "sizeWidth" : 30, 
-        "colorCategory" : "dark"
+        "colorCategory" : "dark",
+        "price" : "2500"
         
     },
     {
@@ -25,7 +27,8 @@
         "yearCreated" : 2020,
         "sizeHeight" : 40,
         "sizeWidth" : 30, 
-        "colorCategory" : "blue"
+        "colorCategory" : "blue",
+        "price" : "1500"
         
     },
     {
@@ -35,7 +38,8 @@
         "yearCreated" : 2020,
         "sizeHeight" : 70,
         "sizeWidth" : 50, 
-        "colorCategory" : "green"
+        "colorCategory" : "green",
+        "price" : "3000"
         
     },
     {
@@ -45,7 +49,8 @@
         "yearCreated" : 2020,
         "sizeHeight" : 70,
         "sizeWidth" : 50, 
-        "colorCategory" : "blue"
+        "colorCategory" : "blue",
+        "price" : "2500"
         
     }
 ]

@@ -35,9 +35,11 @@ const Art = mongoose.model("Art", {
   artName: String,
   imageName: String,
   yearCreated: Number,
+  description: String,
   sizeHeight: Number,
   sizeWidth: Number,
-  colorCategory: String
+  colorCategory: String,
+  price: Number
  
 });
 
