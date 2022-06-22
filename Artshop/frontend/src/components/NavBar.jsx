@@ -36,7 +36,7 @@ export const NavBar = () => {
     return (
         <Nav>
             <h1>
-                <NavLink to ="/">Start</NavLink>
+                <NavLink to ="/">Home</NavLink>
                 </h1>
                 <Ul>
                     <Li>

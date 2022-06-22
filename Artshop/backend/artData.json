@@ -52,5 +52,39 @@
         "colorCategory" : "blue",
         "price" : "2500"
         
+    },
+    {
+        "id" : 6,
+        "artName": "Beach",
+        "imageName": "beach.jpg",
+        "yearCreated" : 2022,
+        "sizeHeight" : 70,
+        "sizeWidth" : 50, 
+        "colorCategory" : "red",
+        "price" : "2000"
+        
+    },
+    {
+        "id" : 7,
+        "artName": "Hill",
+        "imageName": "hill.jpg",
+        "yearCreated" : 2021,
+        "sizeHeight" : 70,
+        "sizeWidth" : 50, 
+        "colorCategory" : "blue",
+        "price" : "1500"
+        
+    },
+    {
+        "id" : 8,
+        "artName": "Golden",
+        "imageName": "golden.jpg",
+        "yearCreated" : 2021,
+        "sizeHeight" : 70,
+        "sizeWidth" : 50, 
+        "colorCategory" : "yellow",
+        "price" : "3000"
+        
     }
+    
 ]

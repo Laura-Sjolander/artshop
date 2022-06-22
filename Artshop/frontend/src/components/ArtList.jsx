@@ -6,32 +6,32 @@ import { ART_LIST_URL} from '../utils/urls'
 
 
 const ArtSection = styled.section`
-    width: 100%;
-    display: flex;
-    //flex-wrap: wrap;
-    // background-image: linear-gradient(to bottom right, #b7bdc2, #e0dbe1);
-    
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+background-color: rgba(0,0,0,0.75);
+position: relative;
 `
 
 const ArtCard = styled.article`
-display: flex;
+position: relative;
 flex: 25%;
-flex-wrap: wrap;
-
-a:link {
-    text-decoration: none;
-   
-  }
-
-  a img {
-        width: 50%;
-        height: 50%;
-        display: flex;
-    }
-
-    p {
-        font-size: 12px;
-    }
+a img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 5px solid #fff;
+}
+p {
+    position: absolute;
+    bottom: 10px;
+    left: 18px;
+    color: black;
+    background: white;
+    opacity: 0.7;
+    padding: 5px 10px;
+    font-size: 25px;
+ }
   `
 
  const ArtList = () => {
@@ -60,9 +60,7 @@ a:link {
                          
                          <img src={require(`../assets/${art.imageName}`)} />
                         
-                        {/* <Link to={`/art/${art.id}`}>
-                            <img src={urls} alt={art.artName} />
-                        </Link> */}
+                        
                         </Link>}
                     </ArtCard>
                    

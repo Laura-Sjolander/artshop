@@ -5,78 +5,29 @@ import { ART_DETAIL_URL } from '../utils/urls'
 //import { Link } from "react-router-dom"
 
 import styled from 'styled-components'
-import { FaArrowLeft } from 'react-icons/fa'
-
-const ArtContainer = styled.main`
-  max-width: 1400px;
-  margin: auto;
-  margin-bottom: 80px;
-  padding: 10px;
-
-  min-height: calc(100vh - 80px - 120px - 80px);
-
-  @media (max-width: 667px) {
-    padding: 0;
-  }
-`
-const ArtPageContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  & article,
-  picture {
-    width: 50%;
-    object-fit: cover;
-  }
-
-  & img {
-    height: 900px;
-    width: 50%;
-    object-fit: cover;
-    margin-bottom: -4px;
-    padding: 10px;
-
-    
-  }
-
-  @media (max-width: 1024px) {
-    & article,
-    picture {
-      width: 50%;
-      height: 100%;
-    }
-
-    & img {
-      height: 50% !important;
-    }
-  }
-
-  @media (max-width: 667px) {
-    & img {
-      width: 100%;
-      height: 100%;
-      padding: 5px 0;
-    }
-  }
-`
+import { FaArrowLeft, FaCartPlus  } from 'react-icons/fa'
 
 const Background = styled.div`
     background-size: cover; 
-    min-height: 100vh;
+    min-height: 84vh;
     position:relative;
+    background-color: gray;
     `
 
 const GoBackButton = styled.button`
     position: absolute;
     top: 20px;
-    left: 10px;
-    padding: 17px;
+    left: 18px;
+    padding: 15px;
     color: white;
-    background-color:black;
+    background-color: black;
     border: none;
-    font-style:bold;
-    font-size:15px;
+    font-size: 15px;
     display: flex;
+    z-index: 1;
+    opacity: 0.5;
+    border-radius: 5px;
+}
     svg {
         margin-right: 10px;
     }
@@ -88,10 +39,10 @@ const DetailContainer = styled.div`
     justify-content: flex-start;
     flex-direction:row; 
     padding: 10px;    
-    margin-bottom: 0,5rem;
-    position:absolute;
+    margin-bottom: 0.5rem;
     bottom: 7px;
     left: 5px;
+    position: absolute;
     background-color: rgba(220,220,220, 0.6);
     img {
         border: 5px solid #fff;
@@ -110,16 +61,16 @@ const DetailContainer = styled.div`
     }
     `
 
-const DescriptionContainer = styled.div`
+const ImageDescriptionContainer = styled.div`
     display:flex;
-    justify-content:flex-start;
+    justify-content:flex-end;
     flex-direction:column; 
     padding: 10px; 
     max-width: 30vw; 
     overflow:auto;
      @media (min-width: 200px) and (max-width:667px){
-        flex-direction:row; 
-        justify-content: space-between;
+        flex-direction: column;
+        align-self: flex-end;
         max-width: 100%;
         h1{
             font-size: 21px;
@@ -161,33 +112,25 @@ const ArtDetail = () => {
 
     // console.log(art)
     if (loading) return <></>;
+    //const poster = `../assets/${art.imageName}`;
+    const backdrop = `https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg`;
 
     return (
-        <ArtContainer>
-            <ArtPageContainer>
-                <picture>
-                <img src={require(`../assets/${art.imageName}`)}
-                        alt={art.imageName}
-                    />
-                </picture>
-
-                <article>
-                    <div style={{ padding: "40px", textAlign: "right" }}>
-                    <DescriptionContainer className='decription-container'>
-                        <h1>{art.artName}</h1>
-                        <h2>{art.yearCreated}</h2>
-                        <p>{art.colorCategory}</p>
-                        <p>{art.price}SEK</p>
-                        <p>{art.description}</p>
-                    </DescriptionContainer>
-                        <button
-                            onClick={() => onBackButtonClick()}
-                        >BACK</button>
-                    </div>
-                </article>
-
-            </ArtPageContainer>
-        </ArtContainer>
+        <article>
+            <Background  style={{ backgroundImage: `url(${backdrop})` }}>
+                <GoBackButton onClick={onBackButtonClick}><FaArrowLeft />Back to artlist</GoBackButton>
+                <DetailContainer className='detail-container'>
+                    <img src={require(`../assets/${art.imageName}`)} alt={art.imageName} />
+                    <ImageDescriptionContainer className='image-description-container'>
+                        <h1>Name:{art.artName}</h1>
+                        <h2>Year: {art.yearCreated}</h2>
+                        <p>Colour: {art.colorCategory}</p>
+                        <p>Price:{art.price}SEK</p>
+                    </ImageDescriptionContainer>
+                    <FaCartPlus  /> 
+                </DetailContainer>
+            </Background>
+        </article>
     );
 
 //     return (

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const FooterStyled = styled.footer `
     width:100%
-    padding: 10px 0 30 px;
+    padding: 10px 10px 30px;
     height: 60px;
     margin: auto;
     text-align:center;

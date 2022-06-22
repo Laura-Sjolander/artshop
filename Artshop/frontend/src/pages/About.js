@@ -4,11 +4,28 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
+const AboutSection = styled.section`
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+position: relative;
+`
 
+const AboutCard = styled.article`
+position: relative;
+//flex: 25%; 
+display:flex;
+text-align: center;
+justify-content:flex-start;
+flex-direction:column; 
+padding: 10px; 
+max-width: 30vw; 
+overflow:auto;`
 
 const AboutStyled = styled.div `
     width:100%
-    padding: 10px 0 30 px;
+    padding: 10px 10px 30px;
     height: 60px;
     margin: auto;
     text-align:center;
@@ -43,11 +60,19 @@ const About = () => {
 
 
 return (
-    <AboutStyled>
+    
+    <AboutSection>
+        <AboutCard>
         <h1>About the artist</h1>
-        <p>I am a hobby artist that have ...</p>
-        <button onClick={() => onBackButtonClick()}>BACK</button>
-        </AboutStyled>
+        <p>I have been passionate about art my whole life. 
+            Vedic Art, Intuitive painting and Abstract are some of the courses I have participated in and I feel this my way of expression.
+            There needs to be freedom of expression and not so much pixel perfect artistry, for me to be able to create.
+            I seldom know what I am about to paint, the motive emerges itself unto the canvas. 
+            Joined a collaboration exhibition in Vallentuna 2018.
+            </p>
+            </AboutCard>
+            </AboutSection> 
+           
 );
 };
 
